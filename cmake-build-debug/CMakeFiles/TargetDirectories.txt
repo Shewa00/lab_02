@@ -1,0 +1,3 @@
+/Users/macbook/CLionProjects/lab-02/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/macbook/CLionProjects/lab-02/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/macbook/CLionProjects/lab-02/cmake-build-debug/CMakeFiles/lab_02.dir

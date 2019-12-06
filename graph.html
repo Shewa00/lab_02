@@ -1,0 +1,54 @@
+<html>
+        <head>
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript">
+              google.charts.load('current', {'packages':['corechart']});
+              google.charts.setOnLoadCallback(drawChart);
+            function drawChart() {
+              var data = new google.visualization.DataTable();
+              data.addColumn('number', 'X');
+         data.addColumn('number', 'forward');
+        data.addColumn('number', 'backward');
+         data.addColumn('number', 'random');
+        
+data.addRows([
+[128, 64, 65, 325, ],
+[256, 126, 128, 655, ],
+[512, 248, 258, 1308, ],
+[1024, 504, 509, 2597, ],
+[2048, 982, 1020, 5319, ],
+[4096, 1973, 2031, 11903, ],
+[8192, 4070, 4225, 51794, ],
+[9216, 4571, 4786, 61989, ],
+]);
+
+              var options = {
+                chart: {
+                  title: 'CPU cache',
+                },
+                hAxis: {
+                  title: 'Buffer size, KB',
+                  logScale: false
+                },
+                vAxis: {
+                  title: 'Time, milliseconds',
+                  logScale: false
+                },
+                explorer: {
+                  axis: 'horizontal',
+                  keepInBounds: true,
+                  maxZoomIn: 8.0,
+                },
+                width: 1200,
+                height: 800,
+              };
+              var chart = new google.visualization.LineChart(document.getElementById('line_top_x'));
+              chart.draw(data, options);
+            }
+          </script>
+        </head>
+        <body>
+          <div id="line_top_x"></div>
+        </body>
+        </html>
+        

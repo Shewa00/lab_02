@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/macbook/CLionProjects/lab-02/Experiment.cpp
+Experiment.h
+/Users/macbook/CLionProjects/lab-02/Experiment.h
+utility
+-
+
+/Users/macbook/CLionProjects/lab-02/Experiment.h
+iostream
+-
+vector
+-
+cmath
+-
+string
+-
+chrono
+-
+cstdlib
+-
+fstream
+-
+
