@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/macbook/CLionProjects/lab-02/Experiment.cpp
-Experiment.h
-/Users/macbook/CLionProjects/lab-02/Experiment.h
-utility
--
-
 /Users/macbook/CLionProjects/lab-02/Experiment.h
 iostream
 -
@@ -27,4 +21,8 @@ cstdlib
 -
 fstream
 -
+
+/Users/macbook/CLionProjects/lab-02/main.cpp
+Experiment.h
+/Users/macbook/CLionProjects/lab-02/Experiment.h
 
