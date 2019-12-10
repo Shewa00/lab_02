@@ -1,4 +1,4 @@
-![Some badge](https://img.shields.io/badge/Booty-Ass-yellow.svg) ![Discord](https://img.shields.io/discord/486961752823562240) ![GitHub repo size](https://img.shields.io/github/repo-size/bootyass/lab-02-cache?style=for-the-badge) [![forthebadge](https://forthebadge.com/images/badges/made-with-c-plus-plus.svg)](https://forthebadge.com) 
+[![Build Status](https://travis-ci.org/Shewa00/lab_02.svg?branch=master)](https://travis-ci.org/Shewa00/lab_02) ![GitHub repo size](https://img.shields.io/github/repo-size/bootyass/lab-02-cache?style=for-the-badge)
 
 # Лабораторная работа №2
 
