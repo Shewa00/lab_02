@@ -10,10 +10,7 @@ jobs:
       script:
         -  chmod 755 Scripts/*.sh
         - docker run -t -v $(pwd):/opt/builder/ --entrypoint ./Scripts/duplication.sh toliak/bootstrap-cpp
-    - name: "compile"
-      script:
-        -  chmod 755 Scripts/*.sh
-        - docker run -t -v $(pwd):/opt/builder/ --entrypoint ./Scripts/compile.sh toliak/bootstrap-cpp
+
 
 notifications:
   email: false
