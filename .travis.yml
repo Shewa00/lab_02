@@ -8,10 +8,10 @@ jobs:
   include:
     - name: "quality"
       script:
-        - docker run -t -v $(pwd):/opt/builder/ --entrypoint ./scripts/duplication.sh toliak/bootstrap-cpp
+        - docker run -t -v $(pwd):/opt/builder/ --entrypoint ./Scripts/duplication.sh toliak/bootstrap-cpp
     - name: "compile"
       script:
-        - docker run -t -v $(pwd):/opt/builder/ --entrypoint ./scripts/compile.sh toliak/bootstrap-cpp
+        - docker run -t -v $(pwd):/opt/builder/ --entrypoint ./Scripts/compile.sh toliak/bootstrap-cpp
 
 notifications:
   email: false
