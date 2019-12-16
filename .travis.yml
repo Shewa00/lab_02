@@ -7,10 +7,10 @@ services:
 
 jobs:
   include:
-    - name: "checks"
+    - name: "quality"
       script:
         - chmod 755 Scripts/*.sh
-        - docker run -t -v $(pwd):/opt/builder/ --entrypoint ./Scripts/checks.sh toliak/bootstrap-cpp
+        - docker run -t -v $(pwd):/opt/builder/ --entrypoint ./Scripts/duplication.sh toliak/bootstrap-cpp
 
 notifications:
   email: false
