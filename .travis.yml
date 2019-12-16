@@ -9,8 +9,8 @@ jobs:
   include:
     - name: "checks"
       script:
-        - chmod 755 scripts/*.sh
-        - docker run -v `pwd`:`pwd` -w `pwd` -t rusdevops/bootstrap-cpp scripts/checks.sh
+        - chmod 755 Scripts/*.sh
+        - docker run -t -v $(pwd):/opt/builder/ --entrypoint ./Scripts/checks.sh toliak/bootstrap-cpp
 
 notifications:
   email: false
