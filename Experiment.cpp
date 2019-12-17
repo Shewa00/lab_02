@@ -1,6 +1,4 @@
-//
-// Created by Shewa on 06/12/2019.
-//
+//Copyright 2019 Shewa00
 
 #include "Experiment.h"
 #include <utility>
@@ -65,15 +63,18 @@ void Experiment::Calculation() {
         for (size_t j = 0; j < loop_amount; j++)
             Forward();
         auto clock_end = std::chrono::high_resolution_clock::now();
-        auto clock_time = std::chrono::duration_cast<std::chrono::milliseconds>(clock_end - clock_start).count();
+        auto clock_time = std::chrono::duration_cast<std::chrono::milliseconds>
+                (clock_end - clock_start).count();
         Notes.emplace_back("Forward", iter, i, clock_time);
 
         clock_start = std::chrono::high_resolution_clock::now();
         for (size_t j = 0; j < loop_amount; j++)
             Backward();
         clock_end = std::chrono::high_resolution_clock::now();
-        clock_time = std::chrono::duration_cast<std::chrono::milliseconds>(clock_end - clock_start).count();
-        clock_time = std::chrono::duration_cast<std::chrono::milliseconds>(clock_end - clock_start).count();
+        clock_time = std::chrono::duration_cast<std::chrono::milliseconds>
+                (clock_end - clock_start).count();
+        clock_time = std::chrono::duration_cast<std::chrono::milliseconds>
+                (clock_end - clock_start).count();
         Notes.emplace_back("Backward", iter, i, clock_time);
 
 
@@ -81,7 +82,8 @@ void Experiment::Calculation() {
         for (size_t j = 0; j < loop_amount; j++)
             Random();
         clock_end = std::chrono::high_resolution_clock::now();
-        clock_time = std::chrono::duration_cast<std::chrono::milliseconds>(clock_end - clock_start).count();
+        clock_time = std::chrono::duration_cast<std::chrono::milliseconds>
+                (clock_end - clock_start).count();
         Notes.emplace_back("Random", iter, i, clock_time);
 
     }
@@ -144,7 +146,6 @@ void Experiment::GraphBuild() {
 
     result += "\ndata.addRows([\n";
     for (size_t i = 0; i < Amount; i++) {
-
         result += "[" + std::to_string(buffer_sizes[i]) + ", ";
         result += std::to_string(forwardTime[i]) + ", ";
         result += std::to_string(backwardTime[i]) + ", ";
@@ -200,6 +201,7 @@ Note::Note(std::string Method, int Number, int Buffer_size, int Result) {
 }
 
 void Note::print(std::ofstream &out) {
-    out << "\n\t- experiment:\n\t\tnumber: " << number << "\n\t\tinput_data:\n\t\t\tbuffer_size: " << buffer_size
+    out << "\n\t- experiment:\n\t\tnumber: " << number
+        << "\n\t\tinput_data:\n\t\t\tbuffer_size: " << buffer_size
         << "\n\t\tresults:\n\t\t\tduration: " << result;
 }
