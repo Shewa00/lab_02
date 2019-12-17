@@ -1,6 +1,4 @@
-//
-// Created by Shewa on 06/12/2019.
-//
+//Copyright 2019 Shewa00
 
 #include "Experiment.h"
 
