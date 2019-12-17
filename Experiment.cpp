@@ -1,5 +1,6 @@
 //Copyright 2019 Shewa00
 
+
 #include "Experiment.h"
 #include <utility>
 
@@ -85,11 +86,11 @@ void Experiment::Calculation() {
         clock_time = std::chrono::duration_cast<std::chrono::milliseconds>
                 (clock_end - clock_start).count();
         Notes.emplace_back("Random", iter, i, clock_time);
-
     }
     Amount = iter;
     std::ofstream out;          // поток для записи
-    out.open("/Users/macbook/CLionProjects/lab-02/results.txt"); // окрываем файл для записи
+    // окрываем файл для записи
+    out.open("/Users/macbook/CLionProjects/lab-02/results.txt");
     if (out.is_open())
         this->print(out);
     GraphBuild();
