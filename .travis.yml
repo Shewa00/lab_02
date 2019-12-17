@@ -7,10 +7,14 @@ services:
 
 jobs:
   include:
-    - name: "quality"
+    - name: "checks"
       script:
-        - chmod 755 Scripts/*.sh
-        - docker run -t -v $(pwd):/opt/builder/ --entrypoint ./Scripts/duplication.sh toliak/bootstrap-cpp
+        - chmod 755 scripts/*.sh
+        - docker run -v `pwd`:`pwd` -w `pwd` -t rusdevops/bootstrap-cpp scripts/checks.sh
+    - name: "tests"
+      script:
+        - ctest -V
+
 
 notifications:
   email: false
